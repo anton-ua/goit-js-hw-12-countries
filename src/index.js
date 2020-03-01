@@ -6,7 +6,8 @@ const debounce = require('lodash.debounce');
 
 const refs = {
   baseUrl: 'https://restcountries.eu/rest/v2/name/',
-  inputForm: document.querySelector('.input-form'),
+  form: document.querySelector('#form'),
+  inputForm: document.querySelector('#input-form'),
 };
 
 function handleCountryName() {
@@ -19,5 +20,7 @@ function handleCountryName() {
 }
 
 pnotifyMessage('info', 'Please, enter a country name');
+
+refs.form.addEventListener('submit', e => e.preventDefault());
 
 refs.inputForm.addEventListener('input', debounce(handleCountryName, 500));

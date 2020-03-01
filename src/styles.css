@@ -22,6 +22,13 @@ body {
   margin: 0 auto;
 }
 
+.input-form {
+  padding: 10px;
+  font-size: 20px;
+  outline-color: darkgray;
+  width: 80%;
+}
+
 .country-container {
   display: flex;
   justify-content: space-between;
@@ -43,7 +50,8 @@ body {
 .country-capital,
 .country-population,
 .country-languages,
-.language-item {
+.language-item,
+.country-item {
   font-size: 20px;
 }
 
